@@ -12,13 +12,7 @@ const Home = () => {
     })
 
     console.log(pokemons);
-        // useEffect(() => {
-    //     const apiFetch = async() => {
-    //         const resp = await axios.get(`${}`)
-    //         console.log(resp);
-    //     }
-    //     apiFetch()
-    // }, [])
+       
 
     return (
         <>
