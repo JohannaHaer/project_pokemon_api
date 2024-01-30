@@ -5,7 +5,7 @@ const TypeResults = () => {
     const {types, setTypes, pokemons, setPokemons} = useContext(mainContext)
     return (
         <>
-        
+            
         </>
     )
 }
