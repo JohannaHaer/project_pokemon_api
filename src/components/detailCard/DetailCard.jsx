@@ -11,7 +11,7 @@ const DetailCard = () => {
         const apiFetch = async() => {
             const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNames.name}`)
             setPokemonDetails(resp)
-            console.log("resp",resp);
+            // console.log("resp",resp);
         }
         {pokemonNames.name ? apiFetch() : null}
     }, [pokemonNames.name])
@@ -39,7 +39,7 @@ const DetailCard = () => {
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonDetails?.data?.id}.png`} alt="" />
             {formate()}
             {pokemonDetails?.data?.types.map((type, index) => {
-                console.log("gib mir die types", type);
+                // console.log("gib mir die types", type);
                 return(
                     <div key={index}>
                         <TypeCard

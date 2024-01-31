@@ -16,13 +16,12 @@ const MainProvider = ({children}) => {
         apiFetch()
     }, [])
 
-    console.log("Pokemons", pokemons);
+    // console.log("Pokemons", pokemons);
 
     useEffect(() => {
         const apiFetch = async() => {
             const resp = await axios.get("https://pokeapi.co/api/v2/type/")
             setTypes(resp.data.results)
-            console.log(resp.data.results);
         }
         apiFetch()
     }, [])

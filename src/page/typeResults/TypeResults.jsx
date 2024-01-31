@@ -35,7 +35,7 @@ const TypeResults = () => {
         fetchPokemonData()
     }, [pokemon])
 
-    console.log("pokemonNames", pokemonNames);
+    // console.log("pokemonNames", pokemonNames);
 
     return (
         <>
