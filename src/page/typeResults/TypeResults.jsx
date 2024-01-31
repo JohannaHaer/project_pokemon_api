@@ -18,7 +18,7 @@ const TypeResults = () => {
             setPokemon(resp.data.pokemon)
             // console.log("typeNames", resp.data.pokemon);
         }
-        apiFetch()
+        {typeNames ? apiFetch() : null}
     }, [typeNames.type])
 
 
