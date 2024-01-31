@@ -5,7 +5,7 @@ import TypeCard from '../../components/typeCard/TypeCard';
 const TypeMenu = () => {
   const {types, setTypes, pokemons, setPokemons} = useContext(mainContext)
   
-  console.log("types", types);
+  // console.log("types", types);
   return (
     <>
       {types.map((type, index) => {
