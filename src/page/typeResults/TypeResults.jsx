@@ -3,6 +3,7 @@ import { mainContext } from '../../context/mainProvider'
 import { useParams } from 'react-router-dom'
 import PokemonCard from '../../components/pokemonCard/PokemonCard'
 import axios from 'axios'
+import Header2 from '../../components/header2/Header2'
 
 const TypeResults = () => {
     const typeNames = useParams()
@@ -38,6 +39,7 @@ const TypeResults = () => {
 
     return (
         <>
+            <Header2/>
             {pokemonNames.length !== 0
             ? (
                 <div>

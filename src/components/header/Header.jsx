@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <img src={logo} alt="Pokémon Logo" />
+                <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
                 <Link to='/menu'>Menu</Link>
                 <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput}/>
             </header>
