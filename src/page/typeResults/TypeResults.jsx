@@ -34,23 +34,29 @@ const TypeResults = () => {
         fetchPokemonData()
     }, [pokemon])
 
-   console.log("pokemonNames", pokemonNames);
- 
+    console.log("pokemonNames", pokemonNames);
 
     return (
         <>
-            {pokemonNames.map((pokemon, index) => {
-                
-                return(
-                    <div key={index}>
-                        <PokemonCard
-                            name={pokemon.name}
-                            id={pokemon.id}
-                            img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`}
-                        />
-                    </div>
-                )
-            })
+            {pokemonNames.length !== 0
+            ? (
+                <div>
+                    {pokemonNames?.map((pokemon, index) => {
+                    
+                        return(
+                            <div key={index}>
+                                <PokemonCard
+                                    name={pokemon?.name}
+                                    id={pokemon?.id}
+                                    img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon?.id}.png`}
+                                />
+                            </div>
+                        )
+                    })
+                    }
+                </div>
+            )
+            : (<p>Loading...</p>)
             }
         </>
     )

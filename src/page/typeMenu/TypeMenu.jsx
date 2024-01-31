@@ -10,10 +10,12 @@ const TypeMenu = () => {
     <>
       {types.map((type, index) => {
         return(
-          <TypeCard
-            type={type.name}
-            id={index+1}
-          />
+          <div key={index}>
+            <TypeCard
+              type={type.name}
+              id={index+1}
+            />
+          </div>
         )
       })}
     </>
