@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import TypeCard from '../typeCard/TypeCard'
+import Pokeball from '../../assets/img/pokeball.png'
 
 const DetailCard = () => {
     const pokemonNames = useParams()
@@ -48,7 +49,10 @@ const DetailCard = () => {
             <div className='divDetails'>
                 <div className='divNameImg'>
                     {formate()}
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonDetails?.data?.id}.png`} alt="" className='imgDetails' />
+                    <div className='test'>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonDetails?.data?.id}.png`} alt="" className='imgDetails' />
+                        <img src={Pokeball} alt="" className='imgPokeball'/>
+                    </div>
                 </div>
                 {pokemonDetails?.data?.types.map((type, index) => {
                     // console.log("gib mir die types", type);

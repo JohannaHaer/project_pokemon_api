@@ -121,9 +121,16 @@ main {
 
 .imgDetails {
   width: 70%;
-  border: 7px solid rgba(33, 50, 134, 0.6);
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid rgba(33, 50, 134, 0.8);
   border-radius: 10px;
-  background-color: rgba(0, 128, 0, 0.3);
+  background-color: rgba(67, 63, 56, 0.5);
+  position: relative;
 }
 
 .pokeName {
@@ -132,6 +139,13 @@ main {
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
+}
+
+.imgPokeball {
+  position: absolute;
+  width: 10%;
+  bottom: -1rem;
+  right: -1rem;
 }
 
 .fontName {
