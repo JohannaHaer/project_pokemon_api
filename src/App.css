@@ -226,6 +226,7 @@ header {
 .secDetails {
   display: flex;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .divDetails {
