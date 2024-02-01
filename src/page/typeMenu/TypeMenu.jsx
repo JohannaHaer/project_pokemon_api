@@ -11,7 +11,12 @@ const TypeMenu = () => {
   return (
     <section className={`secTypePage ${darkMode ? 'dark' : 'light'}`}>
       <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
-      <h2 className='h2TypePage'>TYPE</h2>
+      <div className='menuHead'>
+        <h2 className='h2TypePage'>TYPE</h2>
+        <Link to='/'>
+          <div className={`backX ${darkMode ? 'backXDark' : 'backXLight'}`}>X</div>
+        </Link>
+      </div>
       <div className='divTypePage'>
         {types.map((type, index) => {
           return(

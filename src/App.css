@@ -375,6 +375,33 @@ button{
   padding: 2rem;
 }
 
+.menuHead {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  position: relative;
+}
+
+.backX {
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+}
+
+.backXDark {
+  color: white;
+  border: 2px solid white;
+}
+
+.backXLight {
+  color: black;
+  border: 2px solid black;
+}
+
 .divTypePage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
