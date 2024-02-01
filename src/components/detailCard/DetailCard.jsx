@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import TypeCard from '../typeCard/TypeCard'
+import Pokeball from '../../assets/img/pokeball.png'
 
 const DetailCard = () => {
     const pokemonNames = useParams()
@@ -21,49 +22,65 @@ const DetailCard = () => {
     const formate = () => {
         if(pokemonDetails?.data?.id < 10) {
             return(
-                <h2>#00{pokemonDetails?.data?.id} {pokemonDetails?.data?.name}</h2>
+                <div className='pokeName'>
+                    <h2 className='fontName'>{pokemonDetails?.data?.name}</h2>
+                    <p className='fontName'>#00{pokemonDetails?.data?.id}</p>
+                </div>
             )
         } else if (pokemonDetails?.data?.id >= 10 && pokemonDetails?.data?.id < 100) {
             return(
-                <h2>#0{pokemonDetails?.data?.id} {pokemonDetails?.data?.name}</h2>
+                <div className='pokeName'>
+                    <h2 className='fontName'>{pokemonDetails?.data?.name}</h2>
+                    <p className='fontName'>#0{pokemonDetails?.data?.id}</p>
+                </div>
             )
         } else {
             return(
-                <h2>#{pokemonDetails?.data?.id} {pokemonDetails?.data?.name}</h2>
+                <div className='pokeName'>
+                    <h2 className='fontName'>{pokemonDetails?.data?.name}</h2>
+                    <p className='fontName'>#{pokemonDetails?.data?.id}</p>
+                </div>
             )
         }
     }
 
     return (
-        <>
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonDetails?.data?.id}.png`} alt="" />
-            {formate()}
-            {pokemonDetails?.data?.types.map((type, index) => {
-                // console.log("gib mir die types", type);
-                return(
-                    <div key={index}>
-                        <TypeCard
-                            type={type?.type?.name}
-                        />
+        <section className='secDetails'>
+            <div className='divDetails'>
+                <div className='divNameImg'>
+                    {formate()}
+                    <div className='test'>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonDetails?.data?.id}.png`} alt="" className='imgDetails' />
+                        <img src={Pokeball} alt="" className='imgPokeball'/>
                     </div>
-                )
-            })}
-            <h3>Details</h3>
-            <div>
-                <h4>Abilities</h4>
-                {pokemonDetails?.data?.abilities?.map((abilities, index) => {
+                </div>
+                {pokemonDetails?.data?.types.map((type, index) => {
+                    // console.log("gib mir die types", type);
                     return(
-                        <ul key={index}>
-                            <li>{abilities?.ability?.name}</li>
-                        </ul>
+                        <div key={index}>
+                            <TypeCard
+                                type={type?.type?.name}
+                            />
+                        </div>
                     )
                 })}
+                <h3>Details</h3>
+                <div>
+                    <h4>Abilities</h4>
+                    {pokemonDetails?.data?.abilities?.map((abilities, index) => {
+                        return(
+                            <ul key={index}>
+                                <li>{abilities?.ability?.name}</li>
+                            </ul>
+                        )
+                    })}
+                </div>
+                <div>
+                    <h4>Health Points</h4>
+                    <div><p>{pokemonDetails?.data?.stats?.[0]?.base_stat}</p></div>
+                </div>
             </div>
-            <div>
-                <h4>Health Points</h4>
-                <div><p>{pokemonDetails?.data?.stats?.[0]?.base_stat}</p></div>
-            </div>
-        </>
+        </section>
     )
 }
 

@@ -14,7 +14,7 @@ const Home = () => {
                 {pokemons.map((pokemon, index) => {
                     let i = pokemon.url.slice(34).replace('/', '')
                     return(
-                        <div key={index}>
+                        <div key={index} className='divPreview'>
                             <PokemonCard
                                 name={pokemon.name}
                                 id={i}

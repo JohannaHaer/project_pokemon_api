@@ -6,15 +6,15 @@ const PokemonCard = ({name, id, img}) => {
     const formate = () => {
         if(id < 10) {
             return(
-                <p>#00{id}</p>
+                <p className='fontPreview'>#00{id}</p>
             )
         } else if (id >= 10 && id < 100) {
             return(
-                <p>#0{id}</p>
+                <p className='fontPreview'>#0{id}</p>
             )
         } else {
             return(
-                <p>#{id}</p>
+                <p className='fontPreview'>#{id}</p>
             )
         }
     }
@@ -22,11 +22,11 @@ const PokemonCard = ({name, id, img}) => {
     return (
         <>
             <Link to={`/detail/${name}`}>
-                <div> 
-                    <img src={img} alt={name} />
-                    <div>
+                <div className='pokemonPreview'> 
+                    <div className='imgDivPreview'><img src={img} alt={name} className='imgPreview'/></div>
+                    <div className='pokemonPreviewDescript'>
                         {formate()}
-                        <h2>{name}</h2>
+                        <h2 className='fontPreview'>{name}</h2>
                     </div>
                 </div>
             </Link>
