@@ -6,14 +6,14 @@ import { mainContext } from '../../context/mainProvider'
 
 
 const Header = () => {
-    const {pokemons, setPokemons, pokemonsBackup, setPokemonsBackup} = useContext(mainContext)
+    const {pokemons, setPokemons, searchPokemons, setSearchPokemons} = useContext(mainContext)
     const [searchInput, setSearchInput] = useState("")
     const {darkMode, toggleDarkMode} = useContext(mainContext)
    
     const search = (event) => {
         const input = event.target.value
         setSearchInput(input)
-        const filterPokemons = pokemonsBackup.filter(pokemon => pokemon.name.toLowerCase().includes(input.toLowerCase()))
+        const filterPokemons = searchPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(input.toLowerCase()))
         setPokemons(filterPokemons)
     }
 
