@@ -2,10 +2,16 @@ import React, { createContext, useEffect, useState } from 'react'
 import axios from 'axios'
 export const mainContext = createContext() 
 
+
 const MainProvider = ({children}) => {
     const [pokemons, setPokemons] = useState([])
     const [pokemonsBackup, setPokemonsBackup] = useState([])
     const [types, setTypes] = useState([])
+    const [darkMode, setDarkMode] = useState(false)
+
+    const toggleDarkMode = () => {
+        setDarkMode((oldMode) => !oldMode)
+    }
 
     useEffect(() => {
         const apiFetch = async() => {
@@ -28,7 +34,7 @@ const MainProvider = ({children}) => {
 
     return (
         <>
-            <mainContext.Provider value={{pokemons, setPokemons, types, setTypes, pokemonsBackup, setPokemonsBackup}}>
+            <mainContext.Provider value={{pokemons, setPokemons, types, setTypes, pokemonsBackup, setPokemonsBackup, darkMode, toggleDarkMode}}>
                 {children}
             </mainContext.Provider>
         </>
