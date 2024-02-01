@@ -6,6 +6,7 @@ export const mainContext = createContext()
 const MainProvider = ({children}) => {
     const [pokemons, setPokemons] = useState([])
     const [pokemonsBackup, setPokemonsBackup] = useState([])
+    const [value, setValue] = useState(1)
     const [types, setTypes] = useState([])
     const [darkMode, setDarkMode] = useState(false)
 
@@ -15,12 +16,12 @@ const MainProvider = ({children}) => {
 
     useEffect(() => {
         const apiFetch = async() => {
-            const resp = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100")
+            const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${value}&limit=100`)
             setPokemons(resp.data.results)
             setPokemonsBackup(resp.data.results)
         }
-        apiFetch()
-    }, [])
+        {value ? apiFetch() : null}
+    }, [value])
 
     // console.log("Pokemons", pokemons);
 
@@ -34,7 +35,7 @@ const MainProvider = ({children}) => {
 
     return (
         <>
-            <mainContext.Provider value={{pokemons, setPokemons, types, setTypes, pokemonsBackup, setPokemonsBackup, darkMode, toggleDarkMode}}>
+            <mainContext.Provider value={{pokemons, setPokemons, types, setTypes, pokemonsBackup, setPokemonsBackup, darkMode, toggleDarkMode, value, setValue}}>
                 {children}
             </mainContext.Provider>
         </>
