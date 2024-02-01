@@ -190,6 +190,7 @@ header {
   width: 100%;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 /* Styling der DetailCard */
