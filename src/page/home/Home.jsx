@@ -50,8 +50,8 @@ const Home = () => {
                     })}
                 </div>
                 <div className='buttonsPrevNext'>
-                    <button onClick={previousPage} disabled={disablePrev}>Vorherige</button>
-                    <button onClick={nextPage} disabled={disableNext}>Nächste</button>
+                    <button onClick={previousPage} disabled={disablePrev} className='buttonsHome buttonPrev'>Vorherige</button>
+                    <button onClick={nextPage} disabled={disableNext} className='buttonsHome buttonNext'>Nächste</button>
                 </div>
             </main>
         </>

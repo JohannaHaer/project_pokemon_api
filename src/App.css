@@ -22,20 +22,23 @@ header {
 }
 
 .headerBar {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .searchBar {
   padding: 0.5rem;
-  width: 25%;
+  width: 50%;
   background-color: transparent;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 5px;
   border: 2px solid gray;
+  color: gray;
+  justify-self: center;
 }
 
 .toggleButton {
@@ -44,6 +47,7 @@ header {
   border-radius: 50%;
   background: linear-gradient(to right, black 50%, white 50%);
   cursor: pointer;
+  justify-self: center;
 }
 
 .toggleButtonLight {
@@ -54,20 +58,20 @@ header {
   border: 2px solid black;
 }
 
-
-/* Header1 Burger Menu Styling */
+/* Header1 und Header 2 Burger Menu Styling */
 
 .burgerMenu {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  justify-self: center;
 }
 
 .burgerMenuLineLight {
   border: 1px solid black;
   border-radius: 5px;
   width: 1.7rem;
-  height: 2.3px;
+  height: 2.5px;
   background-color: black;
 }
 
@@ -75,10 +79,19 @@ header {
   border: 1px solid white;
   border-radius: 5px;
   width: 1.7rem;
-  height: 1px;
+  height: 2.5px;
+  background-color: white;
 }
 
 /* Header2 Zurück Styling */
+
+.header2Flex {
+  height: 5rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-self: center;
+}
 
 .back::before {
   font-size: 2.2rem;
@@ -193,6 +206,21 @@ header {
   padding: 2rem;
 }
 
+/* Styling der Buttons (Prev und Next) in Home */
+
+.buttonsHome {
+  background-color: rgba(33, 50, 134, 0.9);
+  cursor: pointer;
+}
+
+.buttonPrev::before {
+  content: '< ';
+}
+
+.buttonNext::after {
+  content: ' >';
+}
+
 /* Styling der DetailCard */
 
 .secDetails {
@@ -262,9 +290,9 @@ button{
   font-size: 1rem;
   font-weight: 700;
   color: whitesmoke;
-  border: 2px solid lightgray;
+  border: 2px solid #2C72B8;
   border-radius: 5px;
-  width: 6rem;
+  width: 8rem;
   text-transform: uppercase;
 }
 
@@ -347,4 +375,68 @@ button{
 
 .shadow {
   background-color: lightcoral;
+}
+
+/* Type Page Styling */
+
+.secTypePage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.menuHead {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  position: relative;
+}
+
+.backX {
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+}
+
+.backXDark {
+  color: white;
+  border: 2px solid white;
+}
+
+.backXLight {
+  color: black;
+  border: 2px solid black;
+}
+
+.divTypePage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 4rem;
+}
+
+.h2TypePage {
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
+  color: #FFCB05;
+}
+
+.secResults {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  justify-self: center;
+  align-self: center;
+}
+
+.loadingDark {
+  color: white;
 }
