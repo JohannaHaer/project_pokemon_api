@@ -7,7 +7,7 @@ import Header2 from '../../components/header2/Header2'
 
 const TypeResults = () => {
     const typeNames = useParams()
-    const {types, setTypes, pokemons, setPokemons} = useContext(mainContext)
+    const {types, setTypes, pokemons, setPokemons, darkMode, toggleDarkMode} = useContext(mainContext)
     const [pokemon, setPokemon] = useState([])
     const [pokemonNames, setPokemonNames] = useState([])
     const pokemonArray = []
@@ -42,7 +42,7 @@ const TypeResults = () => {
             <Header2/>
             {pokemonNames.length !== 0
             ? (
-                <div>
+                <div className={darkMode ? 'dark' : 'light'}>
                     {pokemonNames?.map((pokemon, index) => {
                     
                         return(
