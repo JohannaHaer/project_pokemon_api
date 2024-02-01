@@ -16,12 +16,16 @@ const Header2 = () => {
 
     return (
         <header className={darkMode ? 'dark' : 'light'}>
-            <button onClick={toggleDarkMode}>
-                {darkMode ? 'light' : 'dark'}
-            </button>
             <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
-            <Link to='/'>Back</Link>
-            <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput}/>
+            <div className='headerBar'>
+                <Link to='/'>
+                    <div className='back'></div>
+                </Link>
+                <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput} className='searchBar'/>
+                <button onClick={toggleDarkMode}>
+                    {darkMode ? 'light' : 'dark'}
+                </button>
+            </div>
         </header>
     )
 }

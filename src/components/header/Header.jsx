@@ -20,12 +20,16 @@ const Header = () => {
     return (
         <>
             <header className={darkMode ? 'dark' : 'light'}>
-                <button onClick={toggleDarkMode}>
-                    {darkMode ? 'light' : 'dark'}
-                </button>
                 <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
-                <Link to='/menu'>Menu</Link>
-                <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput}/>
+                <div className='headerBar'>
+                    <Link to='/menu' className='burgerMenu'>
+                        <div className={darkMode ? 'burgerMenuLineDark' : 'burgerMenuLineLight'}></div>
+                        <div className={darkMode ? 'burgerMenuLineDark' : 'burgerMenuLineLight'}></div>
+                        <div className={darkMode ? 'burgerMenuLineDark' : 'burgerMenuLineLight'}></div>
+                    </Link>
+                    <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput} className='searchBar'/>
+                    <div onClick={toggleDarkMode} className={`toggleButton ${darkMode ? 'toggleButtonLight' : 'toggleButtonDark'} ${darkMode ? 'light' : 'dark'}`}></div>
+                </div>
             </header>
         </>
     )
