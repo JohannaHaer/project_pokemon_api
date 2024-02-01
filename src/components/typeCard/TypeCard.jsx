@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const TypeCard = ({type, id}) => {
+
     return (
         <Link to={`/typeresults/${type}`}>
-            <button>{type}</button>
+            <button className={type}>{type}</button>
         </Link>
     )
 }

@@ -157,3 +157,97 @@ main {
 .fontName::first-letter {
   text-transform: uppercase;
 }
+
+/* Button Styling */
+
+button{
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: whitesmoke;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  width: 6rem;
+  text-transform: uppercase;
+}
+
+.normal {
+  background-color:#B3B3B3;
+}
+
+.bug {
+  background-color:#3BB900;
+}
+
+.dark {
+  background-color:black;
+}
+
+.dragon {
+  background-color:#00458A;
+}
+
+.electric {
+  background-color:#FFE600;
+}
+
+.fairy {
+  background-color: #FFC2F9;
+}
+
+.fighting {
+  background-color: #E40000;
+}
+
+.fire {
+  background-color: #FF9900;
+}
+
+.flying {
+  background-color: rgb(211, 158, 35);
+}
+
+.ghost {
+  background-color: #5A1E64;
+}
+
+.grass {
+  background-color: #57921C;
+}
+
+.ground {
+  background-color: #965A00;
+}
+
+.ice {
+  background-color: #6AD2FF;
+}
+
+.poison {
+  background-color: #AB00AE;
+}
+
+.psychic {
+  background-color: #FF81F2;
+}
+
+.rock {
+  background-color: #E1B237;
+}
+
+.steel {
+  background-color: #2A4950;
+}
+
+.water {
+  background-color: #00A0E4;
+}
+
+.unknown {
+  background-color: aliceblue;
+  color: #6AD2FF;
+}
+
+.shadow {
+  background-color: lightcoral;
+}
