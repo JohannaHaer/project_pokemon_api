@@ -16,7 +16,7 @@ const MainProvider = ({children}) => {
 
     useEffect(() => {
         const apiFetch = async() => {
-            const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${value}&limit=100`)
+            const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${value}&limit=51`)
             setPokemons(resp.data.results)
             setPokemonsBackup(resp.data.results)
         }

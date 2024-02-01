@@ -193,6 +193,21 @@ header {
   padding: 2rem;
 }
 
+/* Styling der Buttons (Prev und Next) in Home */
+
+.buttonsHome {
+  background-color: rgba(33, 50, 134, 0.9);
+  cursor: pointer;
+}
+
+.buttonPrev::before {
+  content: '< ';
+}
+
+.buttonNext::after {
+  content: ' >';
+}
+
 /* Styling der DetailCard */
 
 .secDetails {
@@ -262,9 +277,9 @@ button{
   font-size: 1rem;
   font-weight: 700;
   color: whitesmoke;
-  border: 2px solid lightgray;
+  border: 2px solid #2C72B8;
   border-radius: 5px;
-  width: 6rem;
+  width: 8rem;
   text-transform: uppercase;
 }
 
@@ -347,4 +362,27 @@ button{
 
 .shadow {
   background-color: lightcoral;
+}
+
+/* Type Page Styling */
+
+.secTypePage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.divTypePage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 4rem;
+}
+
+.h2TypePage {
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
+  color: #FFCB05;
 }
