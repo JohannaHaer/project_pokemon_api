@@ -38,15 +38,15 @@ const TypeResults = () => {
     // console.log("pokemonNames", pokemonNames);
 
     return (
-        <>
+        <section className={`secResults ${darkMode ? 'dark' : 'light'}`}>
             <Header2/>
             {pokemonNames.length !== 0
             ? (
-                <div className={darkMode ? 'dark' : 'light'}>
+                <div className='divHome'>
                     {pokemonNames?.map((pokemon, index) => {
                     
                         return(
-                            <div key={index}>
+                            <div key={index} className='divPreview'>
                                 <PokemonCard
                                     name={pokemon?.name}
                                     id={pokemon?.id}
@@ -58,9 +58,9 @@ const TypeResults = () => {
                     }
                 </div>
             )
-            : (<p>Loading...</p>)
+            : (<p className={`loading ${darkMode ? 'loadingDark' : 'loadingLight'}`}>Loading...</p>)
             }
-        </>
+        </section>
     )
 }
 

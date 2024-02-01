@@ -6,10 +6,9 @@ import { mainContext } from '../../context/mainProvider'
 
 
 const Header = () => {
-    const {pokemons, setPokemons, searchPokemons, setSearchPokemons} = useContext(mainContext)
+    const {pokemons, setPokemons, searchPokemons, setSearchPokemons, darkMode, toggleDarkMode} = useContext(mainContext)
     const [searchInput, setSearchInput] = useState("")
-    const {darkMode, toggleDarkMode} = useContext(mainContext)
-   
+
     const search = (event) => {
         const input = event.target.value
         setSearchInput(input)
