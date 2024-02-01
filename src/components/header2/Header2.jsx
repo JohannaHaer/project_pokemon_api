@@ -22,9 +22,7 @@ const Header2 = () => {
                     <div className='back'></div>
                 </Link>
                 <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput} className='searchBar'/>
-                <button onClick={toggleDarkMode}>
-                    {darkMode ? 'light' : 'dark'}
-                </button>
+                <div onClick={toggleDarkMode} className={`toggleButton ${darkMode ? 'toggleButtonLight' : 'toggleButtonDark'} ${darkMode ? 'light' : 'dark'}`}></div>
             </div>
         </header>
     )

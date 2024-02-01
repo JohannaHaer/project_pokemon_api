@@ -25,6 +25,7 @@ header {
   align-items: center;
   padding: 2rem 1rem;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .headerBar {
