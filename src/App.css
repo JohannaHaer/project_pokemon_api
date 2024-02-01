@@ -17,6 +17,18 @@ main {
   gap: 3rem 0.5rem;
 }
 
+/* Dark Mode */
+
+.dark-header {
+  background-color: #333;
+  color: #fff;
+}
+
+.light-header {
+  background-color: #fff;
+  color: #333;
+}
+
 /* Styling der Homepage */
 
 .divPreview {

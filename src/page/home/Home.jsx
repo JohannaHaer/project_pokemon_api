@@ -5,12 +5,12 @@ import PokemonCard from '../../components/pokemonCard/PokemonCard'
 import Header from '../../components/header/Header'
 
 const Home = () => {
-    const {pokemons, setPokemons} = useContext(mainContext)
+    const {pokemons, setPokemons, darkMode, toggleDarkMode} = useContext(mainContext)
     
     return (
         <>
             <Header/>
-            <main>
+            <main className={darkMode ? 'dark' : 'light'}>
                 {pokemons.map((pokemon, index) => {
                     let i = pokemon.url.slice(34).replace('/', '')
                     return(
