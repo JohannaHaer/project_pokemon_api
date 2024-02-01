@@ -1,0 +1,76 @@
+.typeSection{
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  
+}
+
+.detailsHeadline {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgba(33, 50, 134, 0.8);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 35rem;
+  font-size: 20px;
+  text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
+  color: #FFCB05;
+}
+
+
+.abilitySection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(33, 50, 134, 0.8);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 35rem;
+}
+
+.abilitySection h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
+  color: #FFCB05;
+}
+
+.abilityList {
+  list-style: none;
+  padding: 0;
+}
+
+.abilityList li {
+  margin-bottom: 5px;
+}
+
+.healthPoints {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid rgba(33, 50, 134, 0.8);
+  border-radius: 10px;
+  background-color: rgba(67, 63, 56, 0.5);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.healthPoints h4 {
+  margin: 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(33, 50, 134, 0.8);
+  font-size: 2rem;
+  text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
+  color: #FFCB05;
+}
+
+.healthPoints p {
+  font-size: 39px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+  

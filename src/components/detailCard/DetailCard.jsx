@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import TypeCard from '../typeCard/TypeCard'
 import Pokeball from '../../assets/img/pokeball.png'
 import { mainContext } from '../../context/mainProvider'
+import './DetailCard.css'
 
 const DetailCard = () => {
     const pokemonNames = useParams()
@@ -47,6 +48,7 @@ const DetailCard = () => {
     }
 
     return (
+        
         <section className={`secDetails ${darkMode ? 'dark' : 'light'}`}>
             <div className='divDetails'>
                 <div className='divNameImg'>
@@ -56,6 +58,8 @@ const DetailCard = () => {
                         <img src={Pokeball} alt="" className='imgPokeball'/>
                     </div>
                 </div>
+
+                <div className='typeSection'>
                 {pokemonDetails?.data?.types.map((type, index) => {
                     // console.log("gib mir die types", type);
                     return(
@@ -66,9 +70,14 @@ const DetailCard = () => {
                         </div>
                     )
                 })}
-                <h3>Details</h3>
+                </div>
+                
+                <div className='detailsHeadline'>
+                <h3>Details:</h3>
+                </div>
                 <div>
-                    <h4>Abilities</h4>
+                <div className='abilitySection'>
+                    <h4>Abilities:</h4>
                     {pokemonDetails?.data?.abilities?.map((abilities, index) => {
                         return(
                             <ul key={index}>
@@ -76,11 +85,15 @@ const DetailCard = () => {
                             </ul>
                         )
                     })}
+                    </div>
                 </div>
                 <div>
-                    <h4>Health Points</h4>
+                    <div className='healthPoints'>
+                    <h4>Health Points: </h4>
                     <div><p>{pokemonDetails?.data?.stats?.[0]?.base_stat}</p></div>
+                    </div>
                 </div>
+                
             </div>
         </section>
     )
