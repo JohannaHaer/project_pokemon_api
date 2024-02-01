@@ -1,12 +1,14 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import TypeCard from '../typeCard/TypeCard'
 import Pokeball from '../../assets/img/pokeball.png'
+import { mainContext } from '../../context/mainProvider'
 
 const DetailCard = () => {
     const pokemonNames = useParams()
     const [pokemonDetails, setPokemonDetails] = useState([])
+    const {darkMode, toggleDarkMode} = useContext(mainContext)
 
     useEffect(() => {
         const apiFetch = async() => {
@@ -45,7 +47,7 @@ const DetailCard = () => {
     }
 
     return (
-        <section className='secDetails'>
+        <section className={`secDetails ${darkMode ? 'dark' : 'light'}`}>
             <div className='divDetails'>
                 <div className='divNameImg'>
                     {formate()}

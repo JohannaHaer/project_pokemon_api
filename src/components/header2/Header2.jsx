@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { mainContext } from '../../context/mainProvider'
 
 const Header2 = () => {
-    const {pokemons, setPokemons, pokemonsBackup, setPokemonsBackup} = useContext(mainContext)
+    const {pokemons, setPokemons, pokemonsBackup, setPokemonsBackup, darkMode, toggleDarkMode} = useContext(mainContext)
     const [searchInput, setSearchInput] = useState("")
 
     const search = (event) => {
@@ -15,11 +15,14 @@ const Header2 = () => {
     }
 
     return (
-        <header>
-                <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
-                <Link to='/'>Back</Link>
-                <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput}/>
-            </header>
+        <header className={darkMode ? 'dark' : 'light'}>
+            <button onClick={toggleDarkMode}>
+                {darkMode ? 'light' : 'dark'}
+            </button>
+            <Link to='/'><img src={logo} alt="Pokémon Logo" /></Link>
+            <Link to='/'>Back</Link>
+            <input type='text' placeholder='Search Pokémon' onChange={search} value={searchInput}/>
+        </header>
     )
 }
 
