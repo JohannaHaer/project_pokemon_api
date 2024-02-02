@@ -11,6 +11,12 @@
   font-family: 'Roboto_Condensed';
 }
 
+#root {
+  height: 100vh;
+  background-color: #CCDADD;
+  overflow: hidden;
+}
+
 /* Header Styling */
 
 header {
@@ -429,6 +435,7 @@ button{
 }
 
 .secResults {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
