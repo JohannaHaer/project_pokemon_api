@@ -72,21 +72,24 @@ const DetailCard = () => {
                 })}
                 </div>
                 
-                <div className='detailsHeadline'>
-                <h3>Details:</h3>
-                </div>
+
+                <h3 className='detailsHeadline'>Details</h3>
+                <hr />
                 <div>
                 <div className='abilitySection'>
                     <h4>Abilities:</h4>
                     {pokemonDetails?.data?.abilities?.map((abilities, index) => {
                         return(
-                            <ul key={index}>
+                            <ul key={index} className='abilityList'>
                                 <li>{abilities?.ability?.name}</li>
                             </ul>
                         )
                     })}
+                    
                     </div>
+        
                 </div>
+                <hr />
                 <div>
                     <div className='healthPoints'>
                     <h4>Health Points: </h4>

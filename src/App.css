@@ -232,6 +232,7 @@ header {
   display: flex;
   justify-content: center;
   padding-bottom: 4rem;
+ 
 }
 
 .divDetails {
@@ -436,7 +437,7 @@ button{
 }
 
 .secResults {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -459,6 +460,7 @@ button{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 10rem;
 }
 
 .pokeball {
@@ -522,4 +524,67 @@ button{
   to {
     transform: none;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+  html {
+    font-size: 12px;
+
+  }
+
+  .headerBar {
+  width: 80%;
+  gap: 2rem 0;
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+.imgDivPreview {
+  overflow: auto;
+}
+
+  .imgDivPreview::after {
+    display: none;
+  }
+
+  .divHome {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem 0;
+    
+  }
+
+  .divDetails {
+    width: 80%;
+    padding: 0.5rem;
+  }
+
+  .header2Flex {
+    gap: 1rem;
+  }
+
+  .divTypePage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .secDetails {
+    padding-bottom: 14rem;
+  }
+
+  .loadingAnimation {
+    padding-bottom: 30rem;
+  }
+
+
+
+
+  /* .imgPreview {
+    width: 8;
+  } */
 }
