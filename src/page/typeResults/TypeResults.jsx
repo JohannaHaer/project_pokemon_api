@@ -58,7 +58,12 @@ const TypeResults = () => {
                     }
                 </div>
             )
-            : (<p className={`loading ${darkMode ? 'loadingDark' : 'loadingLight'}`}>Loading...</p>)
+            : (
+                <div className='loadingAnimation'>
+                    <p className={`loading ${darkMode ? 'loadingDark' : 'loadingLight'}`}>Loading...</p>
+                    <div className="pokeball pokeball-animated"></div>
+                </div>
+            )
             }
         </section>
     )

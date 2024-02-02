@@ -302,10 +302,6 @@ button{
   text-transform: uppercase;
 }
 
-.normal {
-  background-color:#B3B3B3;
-}
-
 .bug {
   background-color:#3BB900;
 }
@@ -320,10 +316,12 @@ button{
 
 .electric {
   background-color:#FFE600;
+  color: #2C72B8;
 }
 
 .fairy {
   background-color: #FFC2F9;
+  color: #2C72B8;
 }
 
 .fighting {
@@ -354,6 +352,10 @@ button{
   background-color: #6AD2FF;
 }
 
+.normal {
+  background-color:#B3B3B3;
+}
+
 .poison {
   background-color: #AB00AE;
 }
@@ -376,7 +378,7 @@ button{
 
 .unknown {
   background-color: aliceblue;
-  color: #6AD2FF;
+  color: #2C72B8;
 }
 
 .shadow {
@@ -439,6 +441,8 @@ button{
   flex-direction: column;
 }
 
+/* Loading for Typeresults */
+
 .loading {
   font-size: 2.5rem;
   text-shadow: 3px 3px 0 #2C72B8, -3px -3px 0 #2C72B8, 3px -3px 0 #2C72B8, -3px 3px 0 #2C72B8, 3px 0 0 #2C72B8, 0 3px 0 #2C72B8, -3px 0 0 #2C72B8, 0 -3px 0 #2C72B8;
@@ -449,4 +453,73 @@ button{
 
 .loadingDark {
   color: #FFCB05;
+}
+
+.loadingAnimation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pokeball {
+  box-sizing: border-box;
+  border: 10px solid #262122;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background: linear-gradient( 150deg, #BA0C2F 0%, #BA0C2F 48%, #262122 48%, #262122 52%, #FFF 52%, #FFF 100%);
+}
+
+.pokeball:before,
+.pokeball:after {
+  content: " ";
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+}
+
+.pokeball:before {
+  background: #262122;
+  width: 80px;
+  height: 80px;
+  margin-top: 75px;
+  margin-left: 75px;
+}
+
+.pokeball:after {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  margin-top: 70px;
+  margin-left: 70px;
+  border: double 20px #262122;
+}
+
+.pokeball-animated {
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 20;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  from {
+    transform: none;
+  }
+  20% {
+    transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+  40% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 5deg);
+  }
+  50% {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 50deg);
+  }
+  to {
+    transform: none;
+  }
 }
