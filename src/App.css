@@ -45,13 +45,13 @@ header {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: linear-gradient(to right, black 50%, white 50%);
+  background: linear-gradient(to right, black 50%, #CCDADD 50%);
   cursor: pointer;
   justify-self: center;
 }
 
 .toggleButtonLight {
-  border: 2px solid white;
+  border: 2px solid #CCDADD;
 }
 
 .toggleButtonDark {
@@ -76,11 +76,11 @@ header {
 }
 
 .burgerMenuLineDark {
-  border: 1px solid white;
+  border: 1px solid #CCDADD;
   border-radius: 5px;
   width: 1.7rem;
   height: 2.5px;
-  background-color: white;
+  background-color: #CCDADD;
 }
 
 /* Header2 Zurück Styling */
@@ -96,20 +96,20 @@ header {
 .back::before {
   font-size: 2.2rem;
   content: '🔙';
-  background-color:  rgba(255, 255, 255, 0.9);
+  background-color:  #CCDADD;
   padding: 0.5rem 0.8rem;
   border-radius: 50%;
 }
 
 /* Dark Mode Styling */
 
-.dark-header {
+.dark {
   background-color: #333;
   color: #fff;
 }
 
-.light-header {
-  background-color: #fff;
+.light {
+  background-color: #CCDADD;
   color: #333;
 }
 
